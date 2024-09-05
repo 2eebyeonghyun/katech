@@ -1,0 +1,285 @@
+@charset 'UTF-8';
+
+.slick-prev,
+.slick-next {
+    position: absolute;
+    top: 55%;
+    margin-top: -50px;
+    display: block;
+    width: 29px;
+    cursor: pointer;
+    outline: none;
+    z-index: 3;
+    opacity: 0.43;
+    -webkit-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+}
+
+.about .slick-prev,
+.about .slick-next {
+    font-size: 0.889rem;
+    opacity: 1;
+    margin-top: -20px;
+    width: 199px;
+    padding: 15px 30px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+.about .slick-prev {
+    text-align: right;
+    display: none !important;
+}
+
+.about .slick-next {
+    text-align: left;
+}
+
+#arrow_slick {
+    display: block;
+    margin: -2px 0 0 0
+}
+
+#arrow_slick.arrow-prev {
+    float: left;
+}
+
+#arrow_slick.arrow-next {
+    float: right
+}
+
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus {
+    opacity: 1
+}
+
+.about .slick-prev:hover,
+.about .slick-prev:focus,
+.about .slick-next:hover,
+.about .slick-next:focus {
+    opacity: 1;
+    border: 1px solid rgba(255, 255, 255, 1)
+}
+
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before {
+    opacity: 1;
+}
+
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before {
+    opacity: .25;
+}
+
+.slick-prev {
+    left: 2rem;
+    width: 15px;
+    height: 25px;
+    background: url(../images/drink/prev_btn.png);
+}
+
+[dir='rtl'] .slick-prev {
+    right: -4rem;
+    left: auto;
+}
+
+.slick-prev:before {
+    content: '';
+}
+
+[dir='rtl'] .slick-prev:before {
+    content: '';
+}
+
+.slick-next {
+    right: 2rem;
+    width: 15px;
+    height: 25px;
+    background: url(../images/drink/next_btn.png);
+}
+
+@media all and (max-width:1023px) {
+
+    .slick-prev,
+    .slick-next {
+        z-index: 555;
+    }
+
+    .slick-prev,
+    [dir='rtl'] .slick-next {
+        left: 0.8rem
+    }
+
+    .slick-next,
+    [dir='rtl'] .slick-prev {
+        right: 0.8rem
+    }
+}
+
+.slick-dots {
+    position: absolute;
+    bottom: -5%;
+    left: 45%;
+    display: block;
+    width: 40%;
+    padding: 0;
+/*    padding-left: 8.333rem;*/
+    list-style: none;
+    text-align: left;
+}
+
+.slick-dots li {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 2px;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.slick-dots li button {
+    display: block;
+    width: 40px;
+    height: 2px;
+    cursor: pointer;
+    color: transparent;
+    font-size: 0;
+    border: 0;
+    outline: none;
+    background: #e0d5c3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+}
+
+.slick-dots li button:before {
+    content: "";
+    position: absolute;
+    cursor: pointer;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #a18b6c;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+    transform-origin: 0 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.5s;
+    transition-duration: 0.5s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+}
+
+.slick-dots li:hover button,
+.slick-dots li.slick-active button {
+    opacity: 1;
+    width: 40px;
+    height: 2px;
+    background: #a18b6c;
+}
+
+.slick-dots li button:hover,
+.slick-dots li button:focus {
+    outline: none;
+}
+
+/* 誘몃뵒�댁옘由� */
+@media all and (max-width: 1700px) {
+    .slick-dots {
+        bottom: 5%
+    }
+}
+
+@media all and (max-width: 1600px) {
+    .slick-dots {
+        bottom: 0
+    }
+}
+
+@media all and (max-width: 1400px) {
+    .slick-dots {
+        padding-left: 5rem;
+        bottom: 0
+    }
+}
+
+@media all and (max-width: 1200px) {
+
+    .main-section2 .slick-prev,
+    .main-section2 .slick-next {
+        display: none !important
+    }
+
+    .about .slick-next {
+        position: absolute;
+        top: auto;
+        bottom: 20%;
+        left: 0;
+        right: 0;
+        margin: 0 auto
+    }
+
+    .slick-dots {
+        padding-left: 5rem;
+        bottom: 0
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .slick-dots {
+        position: relative;
+        display: block;
+        width: auto;
+        padding: 0;
+        padding-left: 0;
+        display: table !important;
+        margin: 0 auto;
+    }
+}
+
+@media all and (max-width: 640px) {
+
+    .about .slick-next {
+        width: 140px;
+        padding: 12px 15px;
+        bottom: 11%;
+        font-size: 0.778rem
+    }
+
+    .about #arrow_slick.arrow-next {
+        margin: -3px 0 0 0
+    }
+
+    .about #arrow_slick.arrow-next img {
+        width: 15px
+    }
+
+    .slick-dots {
+        bottom: 6.5vh
+    }
+}
